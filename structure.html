@@ -6,24 +6,20 @@
 * {
   box-sizing: border-box;
 }
-
 body {
-  background-color: #f1f1f1;
+  background-color: #85C1E9;
 }
-
 #regForm {
   background-color: #ffffff;
   margin: 100px auto;
   font-family: Raleway;
-  padding: 40px;
+  padding: 80px;
   width: 70%;
   min-width: 300px;
 }
-
 h1 {
   text-align: center;  
 }
-
 input {
   padding: 10px;
   width: 100%;
@@ -31,17 +27,14 @@ input {
   font-family: Raleway;
   border: 1px solid #aaaaaa;
 }
-
 /* Mark input boxes that gets an error on validation: */
 input.invalid {
   background-color: #ffdddd;
 }
-
 /* Hide all steps by default: */
 .tab {
   display: none;
 }
-
 button {
   background-color: #4CAF50;
   color: #ffffff;
@@ -51,17 +44,14 @@ button {
   font-family: Raleway;
   cursor: pointer;
 }
-
 button:hover {
   opacity: 0.8;
 }
-
 #prevBtn {
   background-color: #bbbbbb;
 }
-
 /* Make circles that indicate the steps of the form: */
-.step {
+/*.step {
   height: 15px;
   width: 15px;
   margin: 0 2px;
@@ -70,55 +60,58 @@ button:hover {
   border-radius: 50%;
   display: inline-block;
   opacity: 0.5;
-}
-
+}*/
 .step.active {
   opacity: 1;
 }
-
 /* Mark the steps that are finished and valid: */
 .step.finish {
   background-color: #4CAF50;
 }
 .dropbtn {
     background-color: #FFFFFF;
-    padding: 16px;
+    padding: 10px;
     color: #000000;
-    border-radius: 8px;
-    font-size: 12px;
+    font-size: 17px;
     border: none;
     cursor: pointer;
-    border: 2px solid #000000;
+    
     vertical-align: middle;
+     position: relative;
+    display: inline-block;
 }
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
     position: relative;
     display: inline-block;
+    padding: 10px;
+  width: 100%;
+  font-size: 17px;
+  font-family: Raleway;
+  border: 1px solid #aaaaaa;
 }
 select {
    -webkit-appearance: none; 
    -moz-appearance: none;
    appearance: none; 
    background-color: #FFFFFF;
-    padding: 16px;
     color: #000000;
-    border-radius: 8px;
-    font-size: 12px;
-    border: none;
     cursor: pointer;
-    border: 2px solid #000000;
     vertical-align: middle;
      position: relative;
-    display: inline-block;     /* remove default arrow */
+    display: inline-block;  
+    padding: 10px;
+    width: 100%;
+    font-size: 17px;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;   /* remove default arrow */
 }
 /* Dropdown Content (Hidden by Default) */
 select:hover{
    background-color: #e6f2ff;
 }
 option{
-  font-size: 40px;
+  font-size: 17px;
 }
 option:hover{
    display: block;
@@ -127,14 +120,13 @@ option:hover{
 .dropdown-content {
     display: none;
     position: absolute;
-    font-size: 12px;
-    border-radius: 8px;
-    background-color: #ffffff;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    font-size: 17px;
+    color: #000000;
+    background-color: #FFFFFF;
+    min-width: 100%;
+    font-family: Raleway;
+    border: 1px solid #aaaaaa;
 }
-
 /* Links inside the dropdown */
 .dropdown-content a {
     color: black;
@@ -142,20 +134,14 @@ option:hover{
     text-decoration: none;
     display: block;
 }
-
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: #e6f2ff}
-
 /* Show the dropdown menu on hover */
 .dropdown:hover .dropdown-content {
     display: block;
-    border-radius: 10px;
+  
 }
-
 /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {
-    background-color: #e6f2ff;
-}
 </style>
 <body>
 
@@ -164,13 +150,14 @@ option:hover{
   <!-- One "tab" for each step in the form: -->
   <center><div class="tab">I am:
     <div class="dropdown">
-		  <button class="dropbtn"></button>
-		  <div class="dropdown-content">
-		    <a href="#" onclick="nextPrev(1)" >in the hospital after surgery</a>
-		    <a href="#" onclick="nextPrev(1)" >home after surgery</a>
-		  </div>
+      <button class="dropbtn"></button>
 
-		</div></center>
+      <div class="dropdown-content">
+        <a href="#" onclick="nextPrev(1)" >in the hospital after surgery</a>
+        <a href="#" onclick="nextPrev(1)" >home after surgery</a>
+      </div>
+
+    </div></center>
    
   </div>
   <div class="tab">About me:
@@ -179,8 +166,8 @@ option:hover{
       <select name="procedure">
         
         <option value="Select one">Select one</option>
+        <option value="Hysterectomy Abdominal">Hysterectomy Abdominal</option>
         <option value="my gallbladder removed">my gallbladder removed</option>
-      <option value="a hernia fixed">a hernia fixed</option>
       <option value="my appendix removed">my appendix removed</option>
       <option value="a kidney removed">a kidney removed</option>
     <option value="a knee fixed">a knee fixed</option>
@@ -194,12 +181,8 @@ option:hover{
          <option value="a broken leg bone repaired">a broken leg bone repaired</option>
       <option value="a broken arm bone repaired">a broken arm bone repaired</option>
       <option value="a c-sectio">a c-section</option>
-          
-          
-          
+   
       </select>
-
-    <br>
     <br>
     <br>
     Gender
@@ -211,10 +194,7 @@ option:hover{
       <option value="Non Binary">Non Binary</option>
       <option value="Prefer not to say">Prefer not to say</option>
     </select>
-   
 
-
-    <br>
     <br>
     <br>
     Ethnicity
@@ -232,22 +212,21 @@ option:hover{
   
     <br>
     <br>
-    <br>
 
     <p><input placeholder="Zip code" oninput="this.className = ''" name="zipcode"></p>
-    <br>
+
     <br>
     <br>
   Pain Killer Prescribed
    <select name="medication">
       <option value="Select One">Select One</option>
-      <option value="Hydrocodone">Hydrocodone</option>
-      <option value="Codeine">Codeine</option>
-      <option value="Tramadol">Tramadol</option>
-      <option value="Oxycodone">Oxycodone</option>
+      <option value="Hydrocodone (Vicodin and Norco) 5 mg tablet">Hydrocodone</option>
+      <option value="Codeine (Tylenol #3) 30 mg tablets">Codeine</option>
+      <option value="Demerol">Demerol</option>
+      <option value="Vicodin">Vicodin</option>
     </select>
 
-    <br>
+
     <br>
     <br>
 
@@ -296,7 +275,6 @@ option:hover{
 <script>
 var currentTab = 0; // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the crurrent tab
-
 function showTab(n) {
   // This function will display the specified tab of the form...
   var x = document.getElementsByClassName("tab");
@@ -315,7 +293,6 @@ function showTab(n) {
   //... and run a function that will display the correct step indicator:
   fixStepIndicator(n)
 }
-
 function nextPrev(n) {
   // This function will figure out which tab to display
   var x = document.getElementsByClassName("tab");
@@ -334,7 +311,6 @@ function nextPrev(n) {
   // Otherwise, display the correct tab:
   showTab(currentTab);
 }
-
 function validateForm() {
   // This function deals with validation of the form fields
   var x, y, i, valid = true;
@@ -356,7 +332,6 @@ function validateForm() {
   }
   return valid; // return the valid status
 }
-
 function fixStepIndicator(n) {
   // This function removes the "active" class of all steps...
   var i, x = document.getElementsByClassName("step");
